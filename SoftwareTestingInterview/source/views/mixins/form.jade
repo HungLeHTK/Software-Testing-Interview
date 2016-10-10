@@ -1,0 +1,25 @@
+mixin input(inputOpts)
+  input(type=(inputOpts.type || "text"), name=inputOpts.name, id=inputOpts.id || inputOpts.name, value=inputOpts.value)&attributes(inputOpts.attr || attributes)
+
+mixin label(labelOpts)
+  label(for=labelOpts.id)&attributes(attributes)!=labelOpts.text
+
+mixin button(buttonOpts)
+  button(type=(buttonOpts.type || "button"), name=buttonOpts.name, id=(buttonOpts.id || buttonOpts.name), value=buttonOpts.value, title=buttonOpts.text)&attributes( attributes)!=buttonOpts.text
+
+mixin select(selectOpts, options)
+  select(name=selectOpts.name, id=(selectOpts.id || selectOpts.name), value=selectOpts.value)&attributes(selectOpts.attr || attributes)
+    each item, index in options
+      option(value=item.valueOpts+'-'+(index+1), selected=item.selected)!= item.textOpts
+
+mixin textarea(txtAreaOpts)
+  textarea(name=txtAreaOpts.name, id=txtAreaOpts.id || txtAreaOpts.name, value=txtAreaOpts.value)&attributes(txtAreaOpts.attr || attributes)
+
+mixin radio(radioOpts)
+  .radio-group.left
+    +input({type: 'radio', name: radioOpts.name, id: radioOpts.id, attr: radioOpts.attr})
+    +label({id: radioOpts.id, text: radioOpts.label})
+
+mixin radios(radiosOpts)
+  each item in radiosOpts
+    +radio(item)

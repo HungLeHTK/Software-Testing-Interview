@@ -1,0 +1,4 @@
+include ../mixins/all
+.home-block
+  h2 Hello {{$root.app.loginUser.username}}
+  +link('Logout', 'javascript:void(0);').logout(ng-click="logout()")
