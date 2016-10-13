@@ -1,0 +1,46 @@
+// Structure
+.container {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: 2px solid @border-color;
+  box-sizing: border-box;
+}
+header {
+  .logo {
+    font-size: 30px;
+    opacity: 0.5;
+  }
+  nav {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px;
+    .clearfix();
+    li {
+      float: left;
+      position: relative;
+      display: block;
+      a {
+        padding: 5px;
+      }
+    }
+    .active a {
+      color: gray;
+    }
+  }
+}
+main {
+  height: 100%;
+  border: 10px solid @default-color;
+  box-shadow: 0 1px 1px;
+}
+footer {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px;
+}
