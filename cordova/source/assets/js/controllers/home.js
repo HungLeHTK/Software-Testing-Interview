@@ -1,7 +1,3 @@
-app.controller('HomeController', ['$scope', 'authenticate', '$location', function($scope, authenticate, $location) {
-  $scope.logout = function(){
-    authenticate.logout().then(function(respone){
-      $location.path('/');
-    });
-  };
+app.controller('HomeController', ['$log', '$scope', 'authenticate', '$location', function($log, $scope, authenticate, $location) {
+  $log.info('home page');
 }]);

@@ -1,4 +1,14 @@
 include ../mixins/all
-.home-block
-  h2 Hello {{$root.app.loginUser.username}}
-  +link('Logout', 'javascript:void(0);').logout(ng-click="logout()")
+ion-view(class="intro-view")
+  ion-content.page-plans
+    +img("plans", "images/plans.jpg")
+    .content-plans
+      .how-to-use
+        p How to use?
+      .button-group
+        +link()
+          +img("basic", "images/basic-btn.jpg")
+        +link()
+          +img("professtional", "images/professtional-btn.jpg")
+  ion-content
+ion-view

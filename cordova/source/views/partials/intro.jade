@@ -1,5 +1,10 @@
+include ../mixins/all
 ion-view(class="intro-view")
-  ion-content
-    p hello
+  ion-content.page-intro
+    .title-intro
+      p Base on BSC (ISEB) examination
+    +img("intro", "images/intro.jpg")
+    .content-intro
+      +img("intro", "images/testing-interview.jpg")
   ion-content
 ion-view

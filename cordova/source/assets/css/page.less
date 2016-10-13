@@ -1,2 +1,67 @@
-// Page
-.page-1 {}
+// Page-intro
+.page-intro {
+  .title-intro {
+    float: right;
+    padding: .5rem;
+    p {
+      font-style: italic;
+      color: #550101;
+    }
+  }
+  img {
+    padding: 0 .5rem;
+    width: 100%;
+  }
+}
+// Page-plans
+.page-plans {
+  img {
+    width: 100%;
+  }
+  .content-plans {
+    background-color: #D7E8F3;
+    height: 61%;
+    .how-to-use {
+      color: red;
+      font-style: italic;
+      float: right;
+      padding: 1rem 2rem;
+      text-decoration: underline;
+    }
+    .button-group {
+      padding-top: 5rem;
+      img {
+        padding-bottom: 1.5rem;
+        margin: auto;
+        display: block;
+        width: 50%;
+      }
+    }
+  }
+}
+// Page-login
+.page-login {
+  background-color: @bg1color;
+  .title-login {
+    padding: 1rem;
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: @main-color;
+    }
+  }
+  .test-plan {
+    text-align: center;
+    h2 {
+      a {
+        display: block;
+        font-weight: bold;
+      }
+    }
+  }
+  .form-login {
+    color: white;
+    text-align: center;
+    background-color: #057382;
+  }
+}

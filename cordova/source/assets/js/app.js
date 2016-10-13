@@ -12,6 +12,10 @@ app.value('version', '1.0');
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
+      controller: 'IntroController',
+      templateUrl: 'partials/intro.html'
+    })
+    .when('/login', {
       controller: 'LoginController',
       templateUrl: 'partials/login.html'
     })
@@ -28,16 +32,16 @@ app.run(['$rootScope', '$location', '$cookieStore', '$http', function ($rootScop
   $rootScope.app = {};
   $rootScope.app.loginUser = $cookieStore.get('loginUser') || null;
   $rootScope.$on('$locationChangeStart', function (event, next, current) {
-    if($location.path() !== '/'){
-      if(!$rootScope.app.loginUser){
-        $location.path('/');
-      }
-    }
-    else{
-      if($rootScope.app.loginUser){
-        $location.path('/home');
-      }
-    }
+    // if($location.path() !== '/'){
+    //   if(!$rootScope.app.loginUser){
+    //     $location.path('/');
+    //   }
+    // }
+    // else{
+    //   if($rootScope.app.loginUser){
+    //     $location.path('/home');
+    //   }
+    // }
   });
 }]);
 
