@@ -55,9 +55,7 @@ module.exports = function(grunt) {
             '<%= meta.assets %>js/libs/angular-touch.js',
             '<%= meta.assets %>js/libs/angular-aria.js',
             '<%= meta.assets %>js/libs/angular-md5.js',
-            '<%= meta.assets %>js/libs/plugins/*.js',
-            '<%= meta.assets %>js/libs/ionic.js'
-          ],
+            '<%= meta.assets %>js/libs/plugins/*.js',      ],
           '<%= meta.build %>js/l10n.js': '<%= meta.assets %>js/l10n.js',
 
           '<%= meta.build %>js/script.js': [
@@ -232,8 +230,7 @@ module.exports = function(grunt) {
             '<%= meta.assets %>js/libs/angular-touch.js',
             '<%= meta.assets %>js/libs/angular-aria.js',
             '<%= meta.assets %>js/libs/angular-cookies.js',
-            '<%= meta.assets %>js/libs/plugins/*.js',
-            '<%= meta.assets %>js/libs/ionic.js'
+            '<%= meta.assets %>js/libs/plugins/*.js'
           ],
           '<%= meta.build %>js/l10n.js': '<%= meta.assets %>js/l10n.js',
 
