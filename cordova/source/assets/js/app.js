@@ -4,7 +4,7 @@
  * @version 1.0
  */
 
-var app = angular.module('app', ['ngRoute', 'ngResource', 'ngAnimate', 'ngCookies', 'angular-md5']);
+var app = angular.module('app', ['ionic', 'ngRoute', 'ngResource', 'ngAnimate', 'ngCookies', 'angular-md5']);
 
 app.constant('WS_URL', '');
 app.value('version', '1.0');
@@ -28,7 +28,7 @@ app.config(['$routeProvider', function($routeProvider) {
     });
 }]);
 
-app.run(['$rootScope', '$location', '$cookieStore', '$http', function ($rootScope, $location, $cookieStore, $http) {
+app.run(['$rootScope', '$location', '$cookieStore', '$http', '$ionicPlatform', function ($rootScope, $location, $cookieStore, $http, $ionicPlatform) {
   $rootScope.app = {};
   $rootScope.app.loginUser = $cookieStore.get('loginUser') || null;
   $rootScope.$on('$locationChangeStart', function (event, next, current) {
@@ -42,6 +42,16 @@ app.run(['$rootScope', '$location', '$cookieStore', '$http', function ($rootScop
     //     $location.path('/home');
     //   }
     // }
+  });
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
   });
 }]);
 

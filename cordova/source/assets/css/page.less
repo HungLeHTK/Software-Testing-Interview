@@ -41,6 +41,7 @@
 }
 // Page-login
 .page-login {
+  margin: 1rem;
   background-color: @bg1color;
   .title-login {
     padding: 1rem;
@@ -48,20 +49,38 @@
       text-align: center;
       font-size: 1.5rem;
       color: @main-color;
+      padding-bottom: 1rem;
     }
   }
   .test-plan {
     text-align: center;
+    margin: 2rem;
+    padding: 1rem 1rem 0 1rem;
+    border: 0.1rem solid #3FAEBC;
+    //border-right: 1px solid @default-color;
+    background: @bgcolor;
     h2 {
       a {
+        padding-bottom: 1rem;
         display: block;
         font-weight: bold;
       }
     }
   }
   .form-login {
+    border-top: .2rem solid #006572;
+    border-bottom: .2rem solid #006572;
+    margin: 2rem;
+    padding: 2rem;
     color: white;
     text-align: center;
     background-color: #057382;
+    input {
+      margin-top: 1rem;
+    }
+  }
+  button {
+    margin: auto;
+    width: 20%;
   }
 }
